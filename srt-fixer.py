@@ -14,6 +14,10 @@ args = parser.parse_args()
 
 with open(args.fname,newline='') as ifp:	
 	for line in ifp:
+		
+		rexp=re.compile('(\d{2}):(\d{2}):(\d+),(\d+)*\s+-->\s+(\d{2}):(\d{2}):(\d+),(\d+)*')
+		m=rexp.match(line)
+		if (m):	
 	
 		
 			offset=float(sys.argv[2])
